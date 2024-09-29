@@ -1,0 +1,40 @@
+body{
+    font-style:normal;
+
+}
+
+nav{
+
+    display: flex;
+
+    flex-direction: row;
+
+    padding-right: 1.5rem;
+
+    color: white;
+
+    background-color: black;
+
+    margin-left: 2rem;
+
+    justify-content: space-around;
+
+}
+.img{
+    
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+        order: 1;
+        justify-content: end;
+}
+a:hover
+
+{
+
+    color: blue;
+
+}
