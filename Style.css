@@ -1,40 +1,358 @@
-body{
-    font-style:normal;
+body, html{
+    margin: 0;
+
+    padding: 0;
+
+    font-family:  'Helvetica Neue',Arial, sans-serif;
+
+    background-color: #f0f0ed;
+
+    color: #333;
+
+}
+.container{
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
 
 }
 
-nav{
+.navbar{
 
     display: flex;
 
     flex-direction: row;
 
-    padding-right: 1.5rem;
+    padding-right: 1em;
 
     color: white;
 
     background-color: black;
 
-    margin-left: 2rem;
-
-    justify-content: space-around;
-
-}
-.img{
-    
-}
-ul{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: end;
-        order: 1;
-        justify-content: end;
+
+    align-items: center;
+
 }
-a:hover
+.logo{
 
-{
+    height: 50%;
+}
+.logo-container {
+    margin-right: auto;
 
-    color: blue;
+    padding-left: 1em;
+}
+.nav-links {
+    list-style: none;
 
+    display: flex;
+    
+    padding-right: 1em;
+    
+    margin: 0;
+}
+.nav-links  li {
+
+    margin-left: 1.5em;
+}
+
+.nav-links a {
+    
+    color: #fff;
+    
+    text-decoration: none;
+    
+    padding: 0.5em;
+    
+    transition: color 0.3s ease;
+
+}
+.nav-links a:hover{
+    color: #ff6347;
+}
+
+/* MAIN SECTION Styles */
+
+.hero {
+    
+    background-color: #ff6347;
+    
+    color: #fff;
+    
+    padding: 4em 0;
+    
+    text-align: center;
+}
+
+.hero h2 {
+
+    font-size:2.5em ;
+
+    margin-bottom: 0.5em;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+.cta-button:hover{
+    background-color: #dcdc3c;
+}
+
+/* Categories Section Styles */
+.categories{
+    padding: 4em 0;
+    text-align: center;
+}
+.categories h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5em;
+}
+
+.category {
+    background-color: #fff;
+    padding: 1em ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.9em;
+}
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+.category h3 {
+    font-size: 1em;
+    margin: 0;
+}
+/* feature Products Section styles */
+.featured-products {
+    padding: 4em 0;
+    text-align: center;
+}
+.featured-products h2 {
+    font-size: 2em;
+    margin-bottom:  1em;
+}
+.product {
+        background-color: #fff;
+        padding: 0.75em;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-align: center;
+        font-size: 0.9em;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+.product h3 {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+.product p {
+    font-size: 1em;
+    color: #ff6347;
+}
+
+
+/* Testimonial Section Styles */
+
+
+.testimonials {
+    background-color: #333;
+    color: #fff;
+    padding: 4em 0;
+    text-align: center;
+}
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.testimonial {
+    background-color: #444;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+}
+.testimonial p {
+    font-size: 1em;
+    font-style: italic;
+}
+.testimonial h3 {
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: #ff6347;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+.footer p {
+    margin: 0;
+}
+
+/*
+        EXTRA CSS FOR RESPONSIVENESS
+
+*/
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*              SIGN IN / SIGN UP PAGE STYLES */
+
+.form-body, .form-html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ed8a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* signin / signup forms */
+.form {
+    display: none; /* Hides both forms initially*/
+}
+
+/* Show active form when radio button is checked */
+#signin-tab:checked ~ .signin-form,
+#signup-tab:checked ~ .signup-form{
+    display: block; /* Display the selected area*/
+}
+
+/* Form Styles */
+
+form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    margin-bottom:  1em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4500;
+}
+/* Style for labels within the forms */
+
+.form-label {
+    cursor: pointer;
+    padding: 1em 2em ;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0.5em;
+    border-radius: 4px 4px 0 0 ;
+    transition:  background-color 0.3s ease;
+    color: #001aff;
+}
+
+.form-label:hover {
+    color: #ff4500;
+    cursor: pointer;
+
+}
+.form-text {
+    font-size: 0.9em;
+    margin-top: 1em;
+}
+
+.form-text label:hover {
+    text-decoration: underline;
+}
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(9, 33, 64, 0.808);
+    padding: 2em;
+
+}
+@media (max-width: 776px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 0.5em;
+        justify-content: center;
+        text-align: center;
+    }
+    .logo-container{
+        margin: 0;
+        padding: 0.5em;
+        text-align: center;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-top: 1em;
+    }
+    .nav-links li {
+        margin: 0.5em;
+    }
+    .nav-links a {
+        padding: 0.5em;
+    }
 }
